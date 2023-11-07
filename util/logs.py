@@ -19,7 +19,6 @@ class logs:
             "CRITICAL": logging.CRITICAL,
         }
         logs_dir = f"{get_project_path()}/logs"
-        # logs_dir = "/var/test/operation_pc_api_test/logs"
         if os.path.exists(logs_dir) and os.path.isdir(logs_dir):
             pass
         else:

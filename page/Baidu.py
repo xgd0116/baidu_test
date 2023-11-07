@@ -25,5 +25,5 @@ class BaiduPage:
         :param visit_result:
         :return:
         """
-        self.driver.find_element_by_xpath(f'//div[@id="{int(visit_result)}"]//span').click()
+        self.driver.find_element(By.XPATH, f'//div[@id="{int(visit_result)}"]//span').click()
         self.log.info(f"点击第{visit_result}个搜索结果")

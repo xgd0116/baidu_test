@@ -21,7 +21,8 @@ class BaseConf:
         options.add_argument("--headless")
         options.add_argument('window-size=1920x1080')
         driver_path = f"{self._project_path}/driver/chromedriver"
-        self.driver = webdriver.Chrome(options=options, executable_path=driver_path)
+        service = webdriver.ChromeService(executable_path=driver_path)
+        self.driver = webdriver.Chrome(options=options, service=service)
         self.log.info("初始化chrome driver")
         self.driver.implicitly_wait(10)
         self.driver.maximize_window()

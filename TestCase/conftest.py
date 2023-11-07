@@ -11,13 +11,12 @@ def collect_result(item):
     :param item:
     :return:
     """
+    print(111)
     outcome = yield
     report = outcome.get_result()
     case = item.function.__doc__
-    print(case)
+    print(1111)
     if report.outcome == "failed":
-        print("11111111")
         _log.info(f"用例<{case}>运行失败，请检查。")
-    else:
-        print('222222222')
+    if report.outcome == "passed":
         _log.info(f"用例<{case}>运行成功!!!!")
