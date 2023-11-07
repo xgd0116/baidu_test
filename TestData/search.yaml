@@ -1,0 +1,5 @@
+BAIDU:
+  search_data:
+    -
+      search_key: "Image"
+      visit_result: "3"

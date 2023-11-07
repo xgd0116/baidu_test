@@ -1,0 +1,8 @@
+ENV_RUN:
+  env: live
+LIVE:
+  url: https://www.baidu.com
+PROD:
+  url: https://www.baidu.com
+TEST:
+  url: https://www.baidu.com
