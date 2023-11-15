@@ -31,6 +31,10 @@ def save_screen(driver, file_name):
     driver.save_screenshot(f"{save_path}/{file_name}.png")
 
 def get_img(img_url):
+    if os.path.exists(f"{get_project_path()}/temp"):
+        pass
+    else:
+        os.mkdir(f"{get_project_path()}/temp")
     # 下载图片到临时文件夹，去除水印，改变图片大小与被测图片一致
     r = requests.get(img_url)
     img_path = f"{get_project_path()}/temp/temp.png"
